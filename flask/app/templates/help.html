@@ -15,10 +15,7 @@
     <h2 style="text-align: center";">現在対応している漢字一覧です</h2>
     <div class="sort">
         {% for kanji, busyu in list_data.items() %}
-            <h5>{{ kanji }}</h5>
-            {% if loop.index % 10 == 0%}
-                <br>
-            {% endif %}
+            {{ kanji }}{{ '\n' if loop.index is divisibleby 10 else ' ' }}
         {% endfor %}
     </div>
 </body>
