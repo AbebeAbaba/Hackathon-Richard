@@ -18,24 +18,25 @@ def main(user_input):
               ]
     
     flag = 0
-
+    result = [];
 
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
         if(user_input.startswith(pre) == True):
-            print(pre)
+            result.insert(0,pre)
             flag = 1
             break
 
     for suf in suffix:
         if(user_input.endswith(suf) == True):
-            print(suf)
+            result.insert(1,suf)
             flag = 1
             break
     
     if(flag == 0):
-        print(f"{user_input} miss")
-    
+        return result
+    else:
+        return result
 
 # 実行部分
 if __name__ == "__main__":
