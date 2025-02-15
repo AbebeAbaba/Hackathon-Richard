@@ -1,7 +1,16 @@
 <html>
-    <head>
-    </head>
-    <body>
-    <h1>kanji</h1>
-    </body>
+<head>
+</head>
+<body>
+    <h1>小学校で習う常用漢字を入力してください</h1>
+    <form action="/kanji/knpy" method="post">
+        <label for="user_input">漢字を入力:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">結果</button>
+    </form>
+
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
 </html>

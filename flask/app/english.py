@@ -1,4 +1,4 @@
-def main(user_input):
+def main_en(user_input):
     prefix = ["anti","de","dis",
               "en","em","fore",
               "inter","im","il",
@@ -18,26 +18,24 @@ def main(user_input):
               ]
     
     flag = 0
-    result = ['','']
+
+    result_en = []
 
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
         if(user_input.startswith(pre) == True):
-            result.insert(0,pre)
+            result_en.insert(0,pre)
             flag = 1
             break
 
     for suf in suffix:
         if(user_input.endswith(suf) == True):
-            result.insert(1,suf)
+            result_en.insert(1,suf)
             flag = 1
             break
     
-    if(flag == 0):
-        return result
-    else:
-        return result
+    return result_en
 
 # 実行部分
 if __name__ == "__main__":
-    main()
+    main_en()
