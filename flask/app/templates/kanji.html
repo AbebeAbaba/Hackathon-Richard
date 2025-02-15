@@ -10,7 +10,9 @@
     </form>
 
     {% if result %}
-    <h2>Result: {{ result }}</h2>
+    {% for kanji in result %}
+    <h2>Result: {{ kanji }}</h2>
+    {% endfor %}
     {% endif %}
 </body>
 </html>
