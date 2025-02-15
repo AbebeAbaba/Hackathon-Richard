@@ -12,7 +12,8 @@
 
     {% if result %}
     {% for kanji in result %}
-    <h2>Result: {{ kanji }}</h2>
+    {% set my_dict = kanji %}
+    <h2>Result: {{ my_dict.keys() | first }}: {{ my_dict[my_dict.keys() | first] | first }}</h2>
     {% endfor %}
     {% endif %}
 
