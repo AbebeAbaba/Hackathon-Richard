@@ -18,7 +18,7 @@ def main(user_input):
               ]
     
     flag = 0
-    result = [];
+    result = ['','']
 
     
     # 入力された文字とJSON内の漢字を1文字ずつ比較
