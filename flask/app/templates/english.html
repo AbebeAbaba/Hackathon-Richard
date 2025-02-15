@@ -5,11 +5,11 @@
 <head>
 </head>
 <body>
-    <h1>prefix and suffix</h1>
+    <h1>検索結果</h1>
     <form action="/english/enpy" method="post">
-        <label for="user_input">Enter a word:</label>
+        <label for="user_input">調べたい英単語を入力してください:</label>
         <input type="text" id="user_input" name="user_input" required>
-        <button type="submit">結果</button>
+        <button type="submit">検索</button>
     </form>
 
     {% if result %}
