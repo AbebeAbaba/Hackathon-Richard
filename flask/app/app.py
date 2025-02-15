@@ -31,3 +31,7 @@ def knpy():
         result_kn = kanji.main_kn(user_input_kn)  # 結果を取得
         return render_template("kanji.html", result=result_kn)  # 結果を表示
     return render_template("kanji.html")
+
+@app.route("/help")
+def help():
+    return render_template("help.html")
