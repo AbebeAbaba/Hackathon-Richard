@@ -20,7 +20,6 @@ def main(user_input):
     flag = 0
     result = ['','']
 
-    
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
         if(user_input.startswith(pre) == True):
