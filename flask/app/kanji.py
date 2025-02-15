@@ -15,12 +15,10 @@ def main():
 
     # 読み込み失敗
     except FileNotFoundError:
-        print("エラー: JSONファイルが見つかりません。")
         return
     except json.JSONDecodeError:
-        print("エラー: JSONの形式が正しくありません。")
         return
-
+    
     # 配列として入力受け取り
     user_input = list(input("比較したい文字を入力してください: "))
 
@@ -31,7 +29,7 @@ def main():
             # 漢字上下分解 成功 -> 0
             if(compare_with_input(json_data_tp, kanji) != 0):
                 # 両方失敗 -> 失敗報告
-                print(f"入力された文字 '{kanji}' はキーに存在しません。")
+                print("oo")
 
 
 # JSONファイル読み込み関数 漢字リスト
