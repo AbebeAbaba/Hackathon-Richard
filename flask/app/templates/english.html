@@ -1,11 +1,22 @@
-<html>
-    <head>
-    </head>
-    <body>
-    <form action = "/english/enpy" method = "post">
-    <h1>englisha</h1>
-    <input type = "text" name = "english">
-    <button type="submit" value="確認"> 英語 </button>
+<!-- english.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Prefix and Suffix Checker</title>
+</head>
+<body>
+    <h1>Prefix and Suffix Checker</h1>
+    <form action="/english/enpy" method="post">
+        <label for="user_input">Enter a word:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
     </form>
-    </body>
+
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
 </html>
