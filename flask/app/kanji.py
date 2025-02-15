@@ -1,9 +1,8 @@
 import json
 
-
-def main():
+def main_kn(user_input):
     # JSONファイルのパス
-    # 漢字右左ファイル
+    # 漢字配列
     file_path = 'list.json'
 
     # JSONファイル読み込み
@@ -15,15 +14,13 @@ def main():
         return
     except json.JSONDecodeError:
         return
-    
-    # 配列として入力受け取り
-    user_input = list(input("比較したい文字を入力してください: "))
+    result_kn =[]
 
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for kanji in user_input:
-        # 漢字右左分解 成功 -> 0
-        compare_with_input(json_data, kanji) != 0
-    return 0
+        result = compare_with_input(json_data, kanji)
+        result_kn.append({kanji: result})
+    return result_kn
 
 
 # JSONファイル読み込み関数 漢字リスト
@@ -39,9 +36,10 @@ def compare_with_input(json_data, kanji):
         # array_data: 分解後の漢字を含む配列
         array_data = json_data[kanji]
         #結果報告
+        print(array_data)
         return array_data
 
 
 # 実行部分
 if __name__ == "__main__":
-    main()
+    main_kn()
