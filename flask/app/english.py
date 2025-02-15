@@ -1,4 +1,4 @@
-def main():
+def main(user_input):
     prefix = ["anti","de","dis",
               "en","em","fore",
               "in","im","il",
@@ -20,9 +20,7 @@ def main():
     flag = 0
     result = [];
 
-    # 配列として入力受け取り
-    user_input = (input("比較したい文字を入力してください: "))
-
+    
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
         if(user_input.startswith(pre) == True):
