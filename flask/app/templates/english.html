@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <head>
 </head>
+<style>
+    .center{
+        text-align: center;
+    }
+</style>
 <body>
-    <h1>検索結果</h1>
+    <div class="center">
+    <h1>問答！ことばの森</h1>
+    <h2>英単語の接頭辞・接尾辞を学ぼう</h2>
     <form action="/english/enpy" method="post">
         <label for="user_input">調べたい英単語を入力してください:</label>
         <input type="text" id="user_input" name="user_input" required>
         <button type="submit">検索</button>
     </form>
 
+    <h2>検索結果</h2>
     {% if result %}
         {% if result.0 %}
             <h2>接頭辞: {{ result.0 }}</h2>
@@ -26,5 +34,6 @@
 
     <button type="button" onclick="location.href='/'" value="ホーム"> ホームに戻る </button>
     <button type="button" onclick="location.href='/help'" value="問い合わせ"> 問い合わせ </button>
+    </div>
 </body>
 </html>

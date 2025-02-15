@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <head>
 </head>
+<style>
+    .center{
+        text-align: center;
+    }
+</style>
 <body>
-    <h1>小学校で習う常用漢字を入力してください</h1>
-    <h6>※部首はgoo辞書参考</h6>
+    <div class="center">
+    <h1>問答！ことばの森</h1>
+    <h2>漢字の部首を学ぼう！</h2>
     <form action="/kanji/knpy" method="post">
-        <label for="user_input">漢字を入力:</label>
+        <label for="user_input">調べたい漢字を入力してください:</label>
         <input type="text" id="user_input" name="user_input" required>
-        <button type="submit">結果</button>
+        <button type="submit">検索</button>
     </form>
 
+    <h4>※入力に対応しているのは教育漢字までです</h4>
+    <h2>検索結果</h2>
+    <h6>※部首はgoo辞書参考</h6>
     {% if result %}
-    {% for kanji in result %}
-    {% set my_dict = kanji %}
-    <h2>Result: {{ my_dict.keys() | first }}: {{ my_dict[my_dict.keys() | first] | first }}</h2>
-    {% endfor %}
+        <h4>[入力した漢字]:[部首]の形式で出力されます</h4>
+        {% for kanji in result %}
+        {% set my_dict = kanji %}
+        <h2>{{ my_dict.keys() | first }}: {{ my_dict[my_dict.keys() | first] | first }}</h2>
+        {% endfor %}
+    {% else %}
+        <h2>入力された漢字は対応していません</h2>
     {% endif %}
 
     <button type="button" onclick="location.href='/'" value="ホーム"> ホームに戻る </button>
     <button type="button" onclick="location.href='/help'" value="問い合わせ"> 問い合わせ </button>
+    </div>
 </body>
 </html>
