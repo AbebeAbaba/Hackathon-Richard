@@ -17,25 +17,24 @@ def main_en(user_input):
               "ness","ous"
               ]
     
-    flag = 0
-
+    #結果を含む配列[0]: prefix [1]: suffix
     result_en = ["",""]
 
-    # 入力された文字とJSON内の漢字を1文字ずつ比較
+    #入力された文字とJSON内の漢字を1文字ずつ比較
+    #prefix 接頭辞
     for pre in prefix:
         if(user_input.startswith(pre) == True):
             result_en.insert(0,pre)
-            flag = 1
             break
-
+    
+    #suffix 尾接辞
     for suf in suffix:
         if(user_input.endswith(suf) == True):
             result_en.insert(1,suf)
-            flag = 1
             break
-    
+    #結果
     return result_en
 
-# 実行部分
+#実行部分
 if __name__ == "__main__":
     main_en()
