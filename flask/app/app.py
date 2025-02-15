@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request
 from . import english,kanji
+import json
 
 app = Flask(__name__)
 
@@ -35,7 +36,9 @@ def knpy():
         return render_template("kanji.html", result=result_kn)  #結果を表示
     return render_template("kanji.html")
 
-#問い合わせ画面
+#ヘルプ画面
 @app.route("/help")
 def help():
-    return render_template("help.html")
+    with open('list.json', 'r', encoding='utf-8') as words:
+        data = json.load(words)
+    return render_template("help.html", list_data=data)
