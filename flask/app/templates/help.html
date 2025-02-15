@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>問い合わせ</title>
+    <title>ヘルプ</title>
 </head>
 <style>
-    .center{
+    .sort{
         text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
     }
 </style>
 <body>
-    <div class="center">
-        <h1>問い合わせ</h1>
-        <h2>現在制作中</h2>
-        <button type="button" onclick="location.href='/' "value="ホーム" > ホームに戻る </button>
+    <h2 style="text-align: center";">現在対応している漢字一覧です</h2>
+    <div class="sort">
+        {% for kanji, busyu in list_data.items() %}
+            <h5>{{ kanji }}</h5>
+            {% if loop.index % 10 == 0%}
+                <br>
+            {% endif %}
+        {% endfor %}
     </div>
 </body>
 </html>
