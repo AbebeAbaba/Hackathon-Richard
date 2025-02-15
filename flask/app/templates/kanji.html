@@ -21,9 +21,11 @@
     <h6>※部首はgoo辞書参考</h6>
     {% if result %}
         <h4>[入力した漢字]:[部首]の形式で出力されます</h4>
-        {% for kanji in result %}
-        {% set my_dict = kanji %}
-        <h2>{{ my_dict.keys() | first }}: {{ my_dict[my_dict.keys() | first] | first }}</h2>
+        {% for kanji in result or [] %}
+        {% if kanji %}
+            {% set my_dict = kanji %}
+            <h2>{{ my_dict.keys() | first }}: {{ my_dict[my_dict.keys() | first] | first }}</h2>
+        {% endif %}
         {% endfor %}
     {% else %}
         <h2>入力された漢字は対応していません</h2>
