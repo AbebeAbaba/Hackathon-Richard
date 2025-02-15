@@ -36,7 +36,6 @@ def compare_with_input(json_data, kanji):
         # array_data: 分解後の漢字を含む配列
         array_data = json_data[kanji]
         #結果報告
-        print(array_data)
         return array_data
 
 
