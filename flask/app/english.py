@@ -1,4 +1,3 @@
-#aaa
 def main():
     prefix = ["anti","de","dis",
               "en","em","fore",
@@ -38,7 +37,7 @@ def main():
     
     if(flag == 0):
         print(f"{user_input} miss")
-
+    
 
 # 実行部分
 if __name__ == "__main__":
