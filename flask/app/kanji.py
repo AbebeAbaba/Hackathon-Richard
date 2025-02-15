@@ -22,9 +22,8 @@ def main():
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for kanji in user_input:
         # 漢字右左分解 成功 -> 0
-        if(compare_with_input(json_data, kanji) != 0):
-            # 両方失敗 -> 失敗報告
-            print("oo")
+        compare_with_input(json_data, kanji) != 0
+    return 0
 
 
 # JSONファイル読み込み関数 漢字リスト
@@ -39,10 +38,8 @@ def compare_with_input(json_data, kanji):
         # 対応する配列を取得
         # array_data: 分解後の漢字を含む配列
         array_data = json_data[kanji]
-        # 結果出力
-        print(f"入力された文字 '{kanji}' はキーに存在します。対応する配列: {array_data}")
-        #成功報告
-        return 0
+        #結果報告
+        return array_data
 
 
 # 実行部分
