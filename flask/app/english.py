@@ -1,12 +1,12 @@
 def main(user_input):
     prefix = ["anti","de","dis",
               "en","em","fore",
-              "in","im","il",
-              "ir","inter","mid",
+              "inter","im","il",
+              "ir","in","mid",
               "mis","non","over",
               "pre","re","semi",
               "sub","super","trans",
-              "un","under"
+              "under","un"
               ]
 
     suffix = ["able","ible","ed",
