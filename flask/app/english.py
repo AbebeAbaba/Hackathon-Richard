@@ -1,12 +1,12 @@
 def main_en(user_input):
     prefix = ["anti","de","dis",
               "en","em","fore",
-              "in","im","il",
-              "ir","inter","mid",
+              "inter","im","il",
+              "ir","in","mid",
               "mis","non","over",
               "pre","re","semi",
               "sub","super","trans",
-              "un","under"
+              "under","un"
               ]
 
     suffix = ["able","ible","ed",
@@ -18,7 +18,8 @@ def main_en(user_input):
               ]
     
     flag = 0
-    result_en = [];
+
+    result_en = []
 
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
