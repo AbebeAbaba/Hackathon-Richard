@@ -19,7 +19,10 @@ def main_kn(user_input):
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for kanji in user_input:
         result = compare_with_input(json_data, kanji)
-        result_kn.append({kanji: result})
+        if result:
+            result_kn.append({kanji: result})
+        else:
+            result_kn.append({kanji: "*"})
     return result_kn
 
 
