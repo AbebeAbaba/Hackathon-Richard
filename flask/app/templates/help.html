@@ -10,6 +10,10 @@
         display: flex;
         flex-direction: row;
     }
+
+    .center{
+        text-align: center;
+    }
 </style>
 <body>
     <h2 style="text-align: center";">現在対応している漢字一覧です</h2>
@@ -17,6 +21,9 @@
         {% for kanji, busyu in list_data.items() %}
             {{ kanji }}{{ '\n' if loop.index is divisibleby 10 else ' ' }}
         {% endfor %}
+    </div>
+    <div class="center">
+        <button type="button" onclick="location.href='/'" value="ホーム"> ホームに戻る </button>
     </div>
 </body>
 </html>
