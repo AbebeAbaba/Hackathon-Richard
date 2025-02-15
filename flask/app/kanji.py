@@ -4,14 +4,11 @@ import json
 def main():
     # JSONファイルのパス
     # 漢字右左ファイル
-    file_path_lr = 'kanji_left_right.json'
-    # 漢字上下ファイル
-    file_path_tp = 'kanji_top_buttom.json'
+    file_path = 'list.json'
 
     # JSONファイル読み込み
     try:
-        json_data_lr = load_json(file_path_lr)
-        json_data_tp = load_json(file_path_tp)
+        json_data = load_json(file_path)
 
     # 読み込み失敗
     except FileNotFoundError:
@@ -25,11 +22,9 @@ def main():
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for kanji in user_input:
         # 漢字右左分解 成功 -> 0
-        if(compare_with_input(json_data_lr, kanji) != 0):
-            # 漢字上下分解 成功 -> 0
-            if(compare_with_input(json_data_tp, kanji) != 0):
-                # 両方失敗 -> 失敗報告
-                print("oo")
+        if(compare_with_input(json_data, kanji) != 0):
+            # 両方失敗 -> 失敗報告
+            print("oo")
 
 
 # JSONファイル読み込み関数 漢字リスト
