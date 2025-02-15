@@ -19,7 +19,7 @@ def main_en(user_input):
     
     flag = 0
 
-    result_en = []
+    result_en = ["",""]
 
     # 入力された文字とJSON内の漢字を1文字ずつ比較
     for pre in prefix:
