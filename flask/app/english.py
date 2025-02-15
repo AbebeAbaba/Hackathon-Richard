@@ -1,4 +1,6 @@
 def main_en(user_input):
+    
+    #接頭辞配列
     prefix = ["anti","de","dis",
               "en","em","fore",
               "inter","im","il",
@@ -8,7 +10,8 @@ def main_en(user_input):
               "sub","super","trans",
               "under","un"
               ]
-
+    
+    #尾接辞配列
     suffix = ["able","ible","ed",
               "en","er","est",
               "ful","ic","ing",
