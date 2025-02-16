@@ -8,7 +8,9 @@
         }
         .button{
             text-align: center;
+            margin: 0 100px;
         }
+
         h1 {
         position: relative;
         color: #158b2b;
@@ -36,6 +38,26 @@
         body{
             background-color: #ffffe0;
         }
+
+        .btn-circle-flat {
+          display: inline-block;
+          text-decoration: none;
+          background: #87befd;
+          color: #FFF;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          border-radius: 50%;
+          text-align: center;
+          overflow: hidden;
+          transition: .4s;
+          margin: 10px;
+        }
+        
+        .btn-circle-flat:hover {
+          background: #668ad8;
+        }
+
     </style>
     <body>
         <div class="center">
@@ -43,8 +65,8 @@
         <h2>言語を選択してください</h2>
         </div>
         <div class="button">
-            <button type="button" onclick="location.href='./english'" value="移動"> 英語 </button>
-            <button type="button" onclick="location.href='./kanji'" value="移動"> 日本語 </button>
+            <a href="./english" class="btn-circle-flat">英語</a>
+            <a href="./kanji" class="btn-circle-flat">日本語</a>
         </div>
     </body>
 </html>
