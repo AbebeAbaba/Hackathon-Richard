@@ -61,18 +61,31 @@
          box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
          transform: translateY(2px);
         }
+
+        .style{
+            h2{
+            color: #364e96;/*文字色*/
+            padding: 0.5em 0;/*上下の余白*/
+            border-top: solid 3px #364e96;/*上線*/
+            border-bottom: solid 3px #364e96;/*下線*/
+            }
+        }
+
+        u{
+            color: #364e96;
+        }
 </style>
 <body>
     <div class="center">
     <h1>問答！ことばの森</h1>
-    <h2>英単語の接頭辞・接尾辞を学ぼう！</h2>
+    <span class="style"><h2>英単語の接頭辞・接尾辞を学ぼう！</h2></span>
     <form action="/english/enpy" method="post">
         <label for="user_input">調べたい英単語を入力してください:</label>
         <input type="text" id="user_input" name="user_input" required>
         <button type="submit" class="btn-gradient-radius">検索</button>
     </form>
 
-    <h2>検索結果</h2>
+    <h2><u>検索結果</u></h2>
     {% if result %}
         {% if result.0 %}
             <h2>接頭辞: {{ result.0 }}</h2>
