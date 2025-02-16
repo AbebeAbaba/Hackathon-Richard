@@ -7,7 +7,7 @@
     }
     h1 {
         position: relative;
-        color: #158b2b;
+        color: #008000;
         font-size: 40px; /* フォントサイズ変更 */
         padding: 10px 0; /* 余白を調整 */
         text-align: center;
@@ -17,7 +17,7 @@
         h1:before {
         content: "";
         position: absolute;
-        top: -8px; /* フォントサイズに合わせて位置を調整 */
+        top: -6px; /* フォントサイズに合わせて位置を調整 */
         left: 50%;
         width: 200px; /* 横幅を調整 */
         height: 80px; /* 高さを調整 */
@@ -28,10 +28,16 @@
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         }
+
+        body{
+            background-color: #ffffe0;
+        }
 </style>
 <body>
     <div class="center">
-    <h1>問答！ことばの森</h1>
+        <div class="top">
+            <h1>問答！ことばの森</h1>
+        </div>
     <h2>漢字の部首を学ぼう！</h2>
     <form action="/kanji/knpy" method="post">
         <label for="user_input">調べたい漢字を入力してください:</label>
