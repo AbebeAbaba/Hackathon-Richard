@@ -32,6 +32,20 @@
         body{
             background-color: #ffffe0;
         }
+
+        .btn-gradient-radius {
+          display: inline-block;
+          padding: 7px 20px;
+          border-radius: 25px;
+          text-decoration: none;
+          color: #FFF;
+          background: #ff8b5f;
+          transition: .4s;
+        }
+        
+        .btn-gradient-radius:hover {
+          background: #f76a35;
+        }
 </style>
 <body>
     <div class="center">
@@ -42,13 +56,13 @@
     <form action="/kanji/knpy" method="post">
         <label for="user_input">調べたい漢字を入力してください:</label>
         <input type="text" id="user_input" name="user_input" required>
-        <button type="submit">検索</button>
+        <button type="submit" class="btn-gradient-radius">検索</button>
     </form>
 
-    <h4>※入力に対応しているのは教育漢字までです</h4>
+    <h5>※入力に対応しているのは教育漢字までです</h5>
     <h2>検索結果</h2>
     {% if result %}
-        <h4>[入力した漢字]:[部首]の形式で出力されます</h4>
+        <h6>[入力した漢字]:[部首]の形式で出力されます</h6>
         {% for kanji in result or [] %}
         {% if kanji %}
             {% set my_dict = kanji %}
