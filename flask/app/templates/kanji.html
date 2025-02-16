@@ -41,7 +41,6 @@
 
     <h4>※入力に対応しているのは教育漢字までです</h4>
     <h2>検索結果</h2>
-    <h6>※部首はgoo辞書参考</h6>
     {% if result %}
         <h4>[入力した漢字]:[部首]の形式で出力されます</h4>
         {% for kanji in result or [] %}
@@ -53,6 +52,7 @@
     {% else %}
         <h2>入力された漢字は対応していません</h2>
     {% endif %}
+    <h6>※部首はgoo辞書参考</h6>
 
     <button type="button" onclick="location.href='/'" value="ホーム"> ホームに戻る </button>
     <button type="button" onclick="location.href='/help'" value="ヘルプ"> ヘルプ </button>
